@@ -9,6 +9,8 @@ public class MyFirstThread {
 		System.out.println("Insdie main...");
 		try {
 			Thread.sleep(3000);
+			System.out.println("Insdie main after thread.sleep()...");
+			TimeUnit.SECONDS.sleep(3);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
