@@ -1,33 +1,30 @@
-import java.util.Scanner;
+package com.shriwatri;
+
+import java.util.Iterator;
 
 public class ReverseStringDemo {
 
 	public static void main(String[] args) {
-		Scanner scn = new Scanner(System.in);
-		System.out.println("Enter the string");
-		String str =scn.nextLine(); // "Rajesh";//
-		String rev = "";
-		
-		//1. By using String concatenation
-//		int len = str.length();
-//		
-//		for(int i = len-1; i >=0 ;i--) {
-//			rev =rev+ str.charAt(i);
-//		}
-//		
-//	System.out.println("Reverse String is: "+rev);	
-		
-		//2nd Approach using character array
-		/*char a[] = str.toCharArray();
-		int len = a.length;
-		for(int i = len-1; i >=0; i--) {
-			rev = rev+a[i];
+		String revStr =reverse("Ashish");		
+		System.out.println("Your reverse String: "+revStr);
+
+	}
+
+	private static String reverse(String input) {
+		System.out.println("Your input String: "+ input);
+		char[] letters = new char[input.length()];
+		int letterIndex =0;
+		for (int i = input.length()-1; i >=0 ; i--) {
+			letters[letterIndex] = input.charAt(i);
+			letterIndex++;			
 		}
-		System.out.println("Reverse String is: "+rev);	*/
 		
-		//3. Using String Buffer class
-		StringBuffer sb = new StringBuffer(str);
-		System.out.println("Reverse value is using String Buffer: "+sb.reverse());
+		String reverse = "";
+		for (int i = 0; i < letters.length; i++) {
+			reverse = reverse+letters[i];
+		}
+		return reverse;
+		
 	}
 
 }
