@@ -1,28 +1,66 @@
+package com.shriwatri;
 
 public class Student {
+	private Integer id;
 	private String name;
-	private int region;
+	private String emai;
 	
-	public Student(String name, int region) {
+	
+	public Student(Integer id, String name, String emai) {
 		super();
+		this.id = id;
 		this.name = name;
-		this.region = region;
+		this.emai = emai;
 	}
+	
+	
+
+
+	public Integer getId() {
+		return id;
+	}
+
+
+
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+
+
+
 	public String getName() {
 		return name;
 	}
+
+
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getRegion() {
-		return region;
+
+
+
+
+	public String getEmai() {
+		return emai;
 	}
-	public void setRegion(int region) {
-		this.region = region;
+
+
+
+
+	public void setEmai(String emai) {
+		this.emai = emai;
 	}
+
+
+
+
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", region=" + region + "]";
+		return "Student [id=" + id + ", name=" + name + ", emai=" + emai + "]";
 	}
 	
 	
