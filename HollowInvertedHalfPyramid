@@ -1,0 +1,27 @@
+import java.lang.*;
+import java.util.*;
+
+public class HollowInvertedHalfPyramid {
+    public static void main(String[] args) {
+        // YOUR CODE GOES HERE
+        // Please take input and print output to standard input/output (stdin/stdout)
+        // DO NOT USE ARGUMENTS FOR INPUTS
+        // E.g. 'Scanner' for input & 'System.out' for output
+        Scanner scn = new Scanner(System.in);
+        int N = scn.nextInt();
+        // Outer loop for rows
+        for (int i = 0; i < N; i++) {
+            // Inner loop for columns
+            for (int j = 0; j < N - i; j++) {
+                // Print '*' for first row, last row, or boundary columns
+                if (i == 0 || j == 0 || j == N - i - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            // Move to the next line after each row
+            System.out.println();
+        }
+    }
+}
